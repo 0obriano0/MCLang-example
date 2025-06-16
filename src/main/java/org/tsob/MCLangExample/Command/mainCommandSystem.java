@@ -21,7 +21,7 @@ import org.bukkit.entity.Player;
 import org.tsob.MCLangExample.Main;
 import org.tsob.MCLangExample.DataBase.DataBase;
 
-public class mainCommandSystem implements ImainCommandSystem {
+public abstract class mainCommandSystem implements ImainCommandSystem {
   private final transient String id;
   private final transient List<String> permissions;
   private final transient String help;
