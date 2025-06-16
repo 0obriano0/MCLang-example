@@ -22,7 +22,11 @@
       <name>Mojang's Repository</name>
       <url>https://libraries.minecraft.net/</url>
     </repository>
-    
+
+    <repository>
+      <id>maven</id>
+      <url>https://repo1.maven.org/maven2/</url>
+    </repository>
   </repositories>
 
   <dependencies>
@@ -45,6 +49,13 @@
       <groupId>com.mojang</groupId>
       <artifactId>authlib</artifactId>
       <version>1.5.26</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.tsob</groupId>
+      <artifactId>MCLang-API</artifactId>
+      <version>1.0.8</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
