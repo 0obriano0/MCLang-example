@@ -2,8 +2,9 @@ name: MCLangExample
 main: org.tsob.MCLangExample.Main
 version: ${full.version}
 author: 0obrino0
-website: github.com/0obriano0/MCLang/example
+website: github.com/0obriano0/MCLang-example
 api-version: 1.13
+depend: [MCLang]
 commands:
   mclangex:
     description: mclangex Commands.
@@ -19,6 +20,11 @@ permissions:
     children:
       mclangex.user: true
       mclangex.user.help: true
+      mclangex.user.hand.*: true
+  mclangex.user.hand.*:
+    default: true
+    children:
+      mclangex.user.hand.itemname: true
   mclangex.admin.*:
     default: op
     children:

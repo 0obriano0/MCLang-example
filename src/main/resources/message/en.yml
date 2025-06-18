@@ -8,9 +8,9 @@ Command:
   PlayerCanNotUse: "&cYou can't use this command"
   NoPermission: "&cYou don't have this permission"
   CanNotFind: "&cUnknown Command"
-  HandNoItem: "&cNo item in hand"
-  ItemNotFind: "&cUnknown item"
   Help:
     reload: "/mclangex reload Re-read Data"
     help: "/mclangex help Show command description"
     test: "/mclangex test Useless command"
+    hand: "/mclangex hand <type> Operate item in hand"
+    hand_itemname: "/mclangex hand itemname Get item name in hand"

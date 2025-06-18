@@ -10,7 +10,7 @@ public class Commandtest extends mainCommandSystem{
   public Commandtest() {
     super(  "test",
         DataBase.fileMessage.getString("Command.Help.test"),
-        new ArrayList<String>(Arrays.asList("mclang.admin.test")));
+        new ArrayList<String>(Arrays.asList("mclangex.admin.test")));
   }
   
   @Override

@@ -11,6 +11,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.tsob.MCLang.API.MCLang;
 import org.tsob.MCLangExample.Command.ImainCommandSystem;
 import org.tsob.MCLangExample.Command.ToolCommandSystem;
 import org.tsob.MCLangExample.DataBase.DataBase;
@@ -18,6 +19,7 @@ import org.tsob.MCLangExample.DataBase.DataBase;
 public class Main extends JavaPlugin {
   public static Plugin plugin;
   public static Server server;
+  public static MCLang mclang;
 
   @Override
   public void onEnable() {
@@ -29,6 +31,11 @@ public class Main extends JavaPlugin {
 
     setEvents();
     DataBase.fileMessage.reloadFile();
+
+    // MCLang Init
+    // mclang = new MCLang("en_us");
+    mclang = new MCLang(plugin.getConfig().getString("lang"));
+    mclang.reload();
   }
 
   @Override
@@ -56,7 +63,7 @@ public class Main extends JavaPlugin {
         e.printStackTrace();
       }
     } else if (args.length != 0 && (commandLabel.equalsIgnoreCase(DataBase.pluginName.toLowerCase())
-        || commandLabel.equalsIgnoreCase("mclangex"))) {
+        || commandLabel.toLowerCase().equalsIgnoreCase(DataBase.mainCommand.toLowerCase()))) {
       if (!DataBase.getCommands(plugin).contains(args[0])) {
         sender.sendMessage(DataBase.fileMessage.getString("Command.CanNotFind"));
         return false;
@@ -143,5 +150,7 @@ public class Main extends JavaPlugin {
     plugin.reloadConfig();
 
     DataBase.fileMessage.reloadFile();
+    mclang.setLang(plugin.getConfig().getString("lang"));
+    mclang.reload();
   }
 }

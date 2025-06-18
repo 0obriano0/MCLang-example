@@ -13,7 +13,7 @@ public class Commandreload extends mainCommandSystem{
   public Commandreload() {
     super(  "reload",
         DataBase.fileMessage.getString("Command.Help.reload"),
-        new ArrayList<String>(Arrays.asList("mclang.admin.reload")));
+        new ArrayList<String>(Arrays.asList("mclangex.admin.reload")));
   }
   
   @Override

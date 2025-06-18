@@ -14,13 +14,13 @@ public class Commandhelp extends mainCommandSystem{
   public Commandhelp() {
     super(  "help",
         DataBase.fileMessage.getString("Command.Help.help"),
-        new ArrayList<String>(Arrays.asList("mclang.user.help")));
+        new ArrayList<String>(Arrays.asList("mclangex.user.help")));
   }
   
   @Override
   public void run(CommandSender sender, String commandLabel, Command command, String[] args) throws Exception {
     sender.sendMessage(" ");
-    sender.sendMessage("=============== MCLang ===============");
+    sender.sendMessage("=============== mclangex ===============");
     sender.sendMessage(" ");
     for(String command_value :DataBase.getCommands(Main.plugin)) {
       ImainCommandSystem cmd = ToolCommandSystem.getCommandClass(command_value);

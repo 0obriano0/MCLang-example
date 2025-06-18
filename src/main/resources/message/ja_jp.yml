@@ -8,9 +8,9 @@ Command:
   PlayerCanNotUse: "&cこのコマンドは使用できません"
   NoPermission: "&cこのコマンドを使用する権限がありません"
   CanNotFind: "&cコマンドが見つかりません"
-  HandNoItem: "&c手にアイテムがありません"
-  ItemNotFind: "&cアイテムが見つかりません"
   Help:
     reload: "/mclangex reload データを再読み込みします"
     help: "/mclangex help コマンドの説明を表示します"
     test: "/mclangex test 無用のコマンド"
+    hand: "/mclangex hand <type> 手に持っているアイテムを操作します"
+    hand_itemname: "/mclangex hand itemname 手に持っているアイテムの名前を取得します"
