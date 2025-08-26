@@ -24,7 +24,14 @@ public class Commanditemname extends mainCommandSystem{
       player.sendMessage(DataBase.fileMessage.getString("Command.Hand.ItemName.NoItem"));
       return;
     }
-    DataBase.sendMessage(player,"You are holding: " + ChatColor.GREEN + Main.mclang.getItemTranslate(itemStack));
+    // DataBase.sendMessage(player, "You are holding: " + ChatColor.GREEN + Main.mclang.getItemTranslate(itemStack));
+    // DataBase.sendMessage(player, "You are holding(ja_jp): " + ChatColor.GREEN + Main.mclang_ja_jp.getItemTranslate(itemStack));
+    // DataBase.sendMessage(player, "You are holding{zh_tw}: " + ChatColor.GREEN + Main.mclang_zh_tw.getItemTranslate(itemStack));
+    DataBase.sendMessage(player,  "You are holding: " + ChatColor.RESET + "\n" + 
+                                  "   - en    : " + ChatColor.GREEN + Main.mclang.getItemTranslate(itemStack) + ChatColor.RESET + "\n" + 
+                                  "   - ja_jp : " + ChatColor.GREEN + Main.mclang_ja_jp.getItemTranslate(itemStack) + ChatColor.RESET + "\n" + 
+                                  "   - zh_tw : " + ChatColor.GREEN + Main.mclang_zh_tw.getItemTranslate(itemStack) + ChatColor.RESET
+    );
   }
 }
   

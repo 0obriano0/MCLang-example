@@ -20,6 +20,8 @@ public class Main extends JavaPlugin {
   public static Plugin plugin;
   public static Server server;
   public static MCLang mclang;
+  public static MCLang mclang_ja_jp;
+  public static MCLang mclang_zh_tw;
 
   @Override
   public void onEnable() {
@@ -36,6 +38,12 @@ public class Main extends JavaPlugin {
     // mclang = new MCLang("en_us");
     mclang = new MCLang(plugin.getConfig().getString("lang"));
     mclang.reload();
+
+    mclang_ja_jp = new MCLang("ja_jp");
+    mclang_ja_jp.reload();
+
+    mclang_zh_tw = new MCLang("zh_tw");
+    mclang_zh_tw.reload();
   }
 
   @Override
@@ -152,5 +160,7 @@ public class Main extends JavaPlugin {
     DataBase.fileMessage.reloadFile();
     mclang.setLang(plugin.getConfig().getString("lang"));
     mclang.reload();
+    mclang_ja_jp.reload();
+    mclang_zh_tw.reload();
   }
 }
